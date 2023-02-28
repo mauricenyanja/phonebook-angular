@@ -33,6 +33,7 @@ export class EditContactComponent implements OnInit {
       phoneNumber: ['', Validators.required],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
+      email:['']
     });
     this.contactService.getContactById(+contactId).subscribe((data) => {
       this.editContactForm.setValue(data);
